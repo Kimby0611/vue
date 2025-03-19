@@ -21,3 +21,15 @@ vue page 제작
 @keyup event
 .enter .tab .delete .ecs .space .up .down .left .right
 alt, control, shift 와 같은 특수키 처리 >> <input @keyup.alt.enter = "clear">
+
+
+
+mock server(bookvues) url 
+https://17fd0988-b9bd-446a-ab44-f1292fb425b2.mock.pstmn.io
+
+
+mock server
+collactions 폴더 생성 >> mock server 폴더 생성 >> collactions에서 get requeste 클릭 후 파일 이름 만들고 get 옆에 url 복사한거 넣은 후 끝에 /파일이름 넣기
+>>왼쪽 사이드바의 생성한 get 우클릭 후 add example >> 아래 body에서 json으로 바꾸고 json형식의 데이터 넣고 상단의 try 클릭
+>>위에서 복사한 url+/파일이름 web에서 열면 열린다!~
+>>위에껀 테스트용 이걸 vue에서 가져다 쓰려면 axios 설치 후 minins.js 생성 후 vue에서 받는다 코드는 vue-mock-server폴더

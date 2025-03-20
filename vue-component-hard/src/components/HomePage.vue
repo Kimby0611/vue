@@ -11,6 +11,7 @@
     <button @click="$router.push('/eventdata')">Event Data</button>
     <button @click="$router.push('/datasync')">Event Data</button>
     <button @click="$router.push('/slot')">slot</button>
+    <button @click="$router.push('/provide')">provide</button>
   </div>
 </template>
 

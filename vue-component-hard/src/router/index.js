@@ -10,6 +10,7 @@ import DataOption from "@/components/parent/DataOption.vue";
 import EventData from "@/components/parent/EventData.vue";
 import DataSync from "@/components/parent/DataSync.vue";
 import SlotModel from "@/components/slot/SlotModel.vue";
+import ProVide from "@/components/parent/ProVide.vue";
 
 const routes = [
   { path: "/", component: HomePage },
@@ -23,6 +24,7 @@ const routes = [
   { path: "/eventdata", component: EventData },
   { path: "/datasync", component: DataSync },
   { path: "/slot", component: SlotModel },
+  { path: "/provide", component: ProVide },
 ];
 
 const router = createRouter({

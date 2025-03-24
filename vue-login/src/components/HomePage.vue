@@ -3,6 +3,7 @@
     <h2>사이트별 로그인</h2>
     <button @click="$router.push('/kakaologin')">KAKAO</button>
     <button @click="$router.push('/naverlogin')">NAVER</button>
+    <button @click="$router.push('/googlelogin')">GOOGLE</button>
   </div>
 </template>
 

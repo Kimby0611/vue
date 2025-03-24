@@ -6,12 +6,20 @@
         width="222"
       />
     </a>
+    <p>{{ username }}</p>
+    <p>{{ imgurl }}</p>
     <button type="button" @click="kakaoLogout()">로그아웃</button>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      username: "",
+      imgurl: "",
+    };
+  },
   methods: {
     kakaoLogin() {
       window.Kakao.Auth.login({
@@ -26,6 +34,10 @@ export default {
           const kakao_account = res.kakao_account;
           const nickname = kakao_account.profile.nickname;
           const profile_image = kakao_account.profile.profile_image_url;
+          const defaulttext = "카카오톡 이름 : ";
+          const defaultimg = "이미지 URL : ";
+          this.username = defaulttext + kakao_account.profile.nickname;
+          this.imgurl = defaultimg + kakao_account.profile.profile_image_url;
           console.log("nickname", nickname);
           console.log("image", profile_image);
           alert("로그인 성공");
@@ -37,6 +49,8 @@ export default {
     },
     kakaoLogout() {
       window.Kakao.Auth.logout((response) => {
+        this.username = "";
+        this.imgurl = "";
         console.log(response, "로그아웃 되었습니다.");
       });
     },
